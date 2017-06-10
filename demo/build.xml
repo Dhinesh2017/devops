@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project name="demo"  default="build:war" basedir=".">
+	<property name="project.path" value="E:\2017\myapp\work\demo"></property>
+	<property name="war.name" value="demo.war"/>
+	<property name="dist.folder" value="${project.path}/dist"/>
+	<property name="war.ui.webinf.classes.dir" location="${project.path}/WebContent/WEB-INF/classes"/>
+	<property name="war.ui.webinf.dir" location="${project.path}/WebContent/WEB-INF"/>
+	
+	
+	<target name="build:war">
+					<war destfile="${dist.folder}/${war.name}" webxml="${project.path}/WebContent/WEB-INF/web.xml">
+							<zipfileset dir="${project.path}/WebContent">
+							</zipfileset>
+					</war>
+						
+				</target>
+</project>
